@@ -38,6 +38,25 @@ class NodeMgmt:
         node.next = insert_node
         insert_node.next = temp
 
+    def delete(self, data):
+        # 맨 처음 노드 삭제할 경우
+        if self.head.data == data:
+            temp = self.head.data
+            self.head = self.head.next
+            del temp
+        # 중간 노드와 마지막 노드 살제할 경우
+        else:
+            node = self.head
+            while node.next:
+                if node.next.data == data:
+                    temp = node.next
+                    # 중간 노드 혹은 마지막 노드의 next 값을 이전 노드에 연결해준다.
+                    node.next = node.next.next
+                    del temp
+                else:
+                    node = node.next
+
+
 
 linkedlist1 = NodeMgmt(0)
 
@@ -45,4 +64,6 @@ for data in range(1, 10):
     linkedlist1.add(data)
 
 linkedlist1.insert_node(1, Node(1.5))
+
+linkedlist1.delete(0)
 linkedlist1.get_node()
