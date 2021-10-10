@@ -7,7 +7,6 @@ class Node:
 # 헤드 노드 생성
 node1 = Node(1)
 
-
 def add(data):
     # 헤드 노드로 초기화
     node = node1
