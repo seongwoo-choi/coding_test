@@ -56,6 +56,18 @@ class NodeMgmt:
                 else:
                     node = node.next
 
+    def search(self, data):
+        if self.head.data == data:
+            return self.head.data
+        else:
+            node = self.head
+            while node.next:
+                if node.next.data == data:
+                    return node.next.data
+                else:
+                    node = node.next
+
+            return print(node.data == data)
 
 
 linkedlist1 = NodeMgmt(0)
@@ -65,5 +77,5 @@ for data in range(1, 10):
 
 linkedlist1.insert_node(1, Node(1.5))
 
-linkedlist1.delete(0)
-linkedlist1.get_node()
+node = linkedlist1.search(2)
+print(node)
