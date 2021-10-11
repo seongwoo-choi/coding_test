@@ -84,8 +84,3 @@ def linear_read_data(data):
                 return hash_table[index][1]
     else:
         return None
-
-
-print(get_key("Dd"), get_key("Data"))
-chaining_save_data("Dd", "1234")
-print(chaining_read_data("Dd"))
