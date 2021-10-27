@@ -14,8 +14,11 @@ def bubbleSort(data):
 def inserSort(data):
     for i in range(len(data) - 1):
         for index in range(i + 1, 0, -1):
+            print(data)
             if data[index] < data[index - 1]:
                 data[index], data[index - 1] = data[index - 1], data[index]
             else:
                 break
     return data
+
+print(inserSort(data))
