@@ -38,6 +38,5 @@ def solution1789(s):
         elif a > s:
             return n - 1
 
-
-# s = int(input())
-# print(solution1789(s))
+s = int(input())
+print(solution1789(s))
