@@ -39,5 +39,6 @@ def solution1789(s):
             return n - 1
 
 
-s = int(input())
-print(solution1789(s))
+# s = int(input())
+# print(solution1789(s))
+
