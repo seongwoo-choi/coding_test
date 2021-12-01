@@ -28,5 +28,20 @@ def solution9095(num):
     return a[i]
 
 
+# number = int(input())
+# print(solution9095(number))
+
+# 1. 입력값에 따른 빈 리스트 만들기
+# 2. 초기값을 설정
+# 3. 점화식 기반으로 계산값 적용하기
+# 4. 특정 입력값에 따른 계산값을 리스트에서 추출하기
+def solution9461(num):
+    dp = [0] * 101
+    dp[1], dp[2], dp[3] = 1, 1, 1
+
+    for n in range(1, 98):
+        dp[n + 3] = dp[n] + dp[n + 1]
+    return print(dp[num])
+
 number = int(input())
-print(solution9095(number))
+solution9461(number)
