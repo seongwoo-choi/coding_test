@@ -15,8 +15,6 @@ function add(num1, num2) {
   return sum;
 }
 
-const num = [1, 2, 3, 3, 3, 4, 4, 5, 5, 6];
-
 function charCount(arr) {
   // 문자열 q 를 split 으로 값을 쪼개서 배열로 만든다.
   // 배열 내부의 값들을 sort
@@ -38,38 +36,7 @@ function charCount(arr) {
   console.log(count);
 }
 
-function charCountForEach(arr) {
-  let sample = arr.split("").sort().join("").trim().split("");
-
-  let result = {};
-  sample.forEach((x) => {
-    // result[x] 가 존재하면 현재 result[x] 의 밸류 값에 + 1
-    if (result[x]) {
-      result[x] += 1;
-    }
-    // result[x] 가 undefined 일 경우 객체 생성을 해주고 밸류값으로는 1을 집어넣어준다.
-    else {
-      result[x] = 1;
-    }
-  });
-  return result;
-}
-
 console.log(charCountForEach("aababbbacaccswcwajidjihod"));
-
-function avgNum(numArray) {
-  const avg = numArray.reduce((acc, current, index, array) => {
-    // index 의 갯수가 배열 갯수와 같아졌을 경우엔 스탑
-    if (index === array.length - 1) {
-      return (acc + current) / array.length;
-    }
-    // if 문 통과하기 전까지 모든 숫자를 더한다.
-    return acc + current;
-  }, 0);
-  console.log(avg);
-}
-
-avgNum(num);
 
 // 먼저 알 수 있는 것은 출력값이 배열이나 다른 데이터 구조가 아니라 객체여야 한다.
 charCount("aaaa"); // 출력 => { a:4 }
